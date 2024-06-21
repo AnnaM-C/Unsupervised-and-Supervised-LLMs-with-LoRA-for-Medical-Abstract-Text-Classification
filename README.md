@@ -50,5 +50,8 @@ Our experiments demonstrated that integrating LoRA improved model performance ac
 ## Conclusion:
 The project highlights the potential of supervised LLMs enhanced with LoRA for medical abstract classification. Future studies could explore advanced techniques like QLoRA to further optimize performance. Ethical considerations include privacy preservation and model validation before clinical deployment. Scaling the experiment to larger datasets could validate its efficacy for broader medical applications.
 
+## Disclaimer:
+Experiments were conducted using HTCondor for job scheduling, and the code was pushed at a later stage for analysis and reporting. This project is a prototype and should not be used for clinical or diagnostic purposes without thorough validation and regulatory approval. Ethical considerations, including privacy preservation and model reliability, must be addressed before deployment in medical settings.
+
 ## License
 This README is intended to provide a detailed and clear description of the set up and process of execution for each experimentation that users can follow.
