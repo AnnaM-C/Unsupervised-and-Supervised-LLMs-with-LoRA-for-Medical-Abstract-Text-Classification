@@ -5,8 +5,50 @@ In the medical field, diagnosing diseases accurately and early is crucial but ch
 ## Implementation:
 We implemented three supervised models—ELECTRA, RoBERTa, and BERT—enhanced with LoRA for better parameter efficiency and performance. We created a consistent training, testing, and validation split by converting it to Parquet format and uploading it to HuggingFace for better portability. Tokenization and batch processing optimized model training, while validation metrics and loss curves guided the fine-tuning.
 
+## Set Up:
+
+### Prerequisites
+Ensure the necessary libraries are installed by running pip install -r requirements.txt to create the environment.
+
+## Running the Experiments
+
+### Basic Models Without LoRA
+To run the three baseline models without LoRA, run the following commands:
+
+* BERT without LoRA:
+python bert_nolora.py
+
+* RoBERTa without LoRA:
+python roberta_nolora.py
+
+* ELECTRA without LoRA:
+python electra_nolora.py
+
+### Models With LoRA
+To run the models with LoRA run the following python files. Results and metrics will be saved in the respective directories.
+
+* BERT with LoRA:
+python bert.py
+
+* RoBERTa with LoRA:
+python roberta.py
+
+* ELECTRA with LoRA:
+python electra.py
+
+### Ablation Studies
+For the ablation studies the rank and alpha values in each script (bert.py, roberta.py, electra.py) are manually adjusted. Start with rank 16 and alpha 32, and halve these values in subsequent runs until reaching rank 4 and alpha 8.
+
+### Hyperparameter Tuning
+To perform hyperparameter tuning on the ELECTRA model, run the following:
+
+python tune_electra.py
+
 ## Results and Observations:
 Our experiments demonstrated that integrating LoRA improved model performance across all three LLMs compared to unsupervised benchmarks. RoBERTa + LoRA emerged as the top performer, surpassing the unsupervised model by significant margins in terms of F1-score. However, challenges like class imbalance in training data and overfitting were observed, suggesting the need for further research and data augmentation strategies.
 
 ## Conclusion:
 The project highlights the potential of supervised LLMs enhanced with LoRA for medical abstract classification. Future studies could explore advanced techniques like QLoRA to further optimize performance. Ethical considerations include privacy preservation and model validation before clinical deployment. Scaling the experiment to larger datasets could validate its efficacy for broader medical applications.
+
+## License
+This README is intended to provide a detailed and clear description of the set up and process of execution for each experimentation that users can follow.

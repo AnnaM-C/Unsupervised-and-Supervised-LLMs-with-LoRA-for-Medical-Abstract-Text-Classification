@@ -1,0 +1,9 @@
+,metrics
+test_accuracy,0.5506493506493506
+test_f1,0.546111441915016
+test_loss,1.3390357494354248
+test_precision,0.5458993665037861
+test_recall,0.5506493506493506
+test_runtime,3.006
+test_samples_per_second,384.226
+test_steps_per_second,48.236
